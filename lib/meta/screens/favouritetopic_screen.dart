@@ -118,6 +118,9 @@ class _FavouriteTopicScreenState extends State<FavouriteTopicScreen> {
                     color: BConstantColors.txt2Color),
                 voidCallback: () {},
                 textAlign: TextAlign.center),
+            SizedBox(
+              height: SizeConfig.blockSizeVertical! * 2,
+            ),
           ],
         ),
       ),

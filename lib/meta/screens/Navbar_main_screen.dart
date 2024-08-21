@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:newsapp/meta/screens/favouritetopic_screen.dart';
-import 'package:newsapp/meta/screens/home_screen.dart';
+import 'package:newsapp/meta/screens/favouritetopic/favouritetopic_screen.dart';
+import 'package:newsapp/meta/screens/home/home_screen.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 import '../../app/constants/constants.dart';
@@ -15,7 +15,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
   late PageController pageController;
 
   @override
@@ -68,7 +68,7 @@ class _MainScreenState extends State<MainScreen> {
                     child: HomeScreen(),
                   ),
                   Center(
-                    child: FavouriteTopicScreen(),
+                    child: HomeScreen(),
                   ),
                   Center(
                     child: HomeScreen(),

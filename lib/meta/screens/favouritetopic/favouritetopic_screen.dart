@@ -1,8 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapp/app/constants/constants.dart';
+import 'package:newsapp/meta/screens/Navbar_main_screen.dart';
 import 'package:newsapp/meta/widgets/custombuttons.dart';
-import '../../app/constants/sizeconfig.dart';
+import '../../../app/constants/sizeconfig.dart';
 
 class FavouriteTopicScreen extends StatefulWidget {
   const FavouriteTopicScreen({super.key});
@@ -106,7 +107,14 @@ class _FavouriteTopicScreenState extends State<FavouriteTopicScreen> {
               textstyle: kPopinsSemiBold.copyWith(
                   fontSize: SizeConfig.blockSizeHorizontal! * 5,
                   color: BConstantColors.buttontxtColor),
-              voidCallback: () {},
+              voidCallback: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MainScreen(),
+                  ),
+                );
+              },
             ),
             SizedBox(
               height: SizeConfig.blockSizeVertical! * 2,
@@ -116,10 +124,17 @@ class _FavouriteTopicScreenState extends State<FavouriteTopicScreen> {
                 textstyle: kPopinsSemiBold.copyWith(
                     fontSize: SizeConfig.blockSizeHorizontal! * 5,
                     color: BConstantColors.txt2Color),
-                voidCallback: () {},
+                voidCallback: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MainScreen(),
+                    ),
+                  );
+                },
                 textAlign: TextAlign.center),
             SizedBox(
-              height: SizeConfig.blockSizeVertical! * 2,
+              height: SizeConfig.blockSizeVertical! * 3,
             ),
           ],
         ),

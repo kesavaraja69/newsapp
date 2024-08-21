@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:newsapp/meta/screens/main_screen.dart';
-import 'meta/screens/favouritetopic_screen.dart';
+import 'meta/screens/favouritetopic/favouritetopic_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,23 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.poppins().fontFamily,
         useMaterial3: true,
       ),
-      home: const MainScreen(),
+      home: const FavouriteTopicScreen(),
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({
-    super.key,
-  });
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return const FavouriteTopicScreen();
   }
 }

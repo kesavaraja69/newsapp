@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/app/constants/constants.dart';
+import 'package:newsapp/meta/screens/newslist/newsdetails/news_detail_screen.dart';
 
-import '../../app/constants/sizeconfig.dart';
-import '../../core/api/newslist_data.dart';
+import '../../../app/constants/sizeconfig.dart';
+import '../../../core/api/newslist_data.dart';
 
 class NewsListScreen extends StatelessWidget {
   const NewsListScreen({super.key});
@@ -22,7 +23,25 @@ class NewsListScreen extends StatelessWidget {
                     title: topics_with_details[index]['title'],
                     time: topics_with_details[index]['time'],
                     image: topics_with_details[index]['topic_image'],
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => NewsDetailScreen(
+                            title: topics_with_details[index]['title'],
+                            duration: topics_with_details[index]['read_time'],
+                            time: topics_with_details[index]['time'],
+                            image: topics_with_details[index]['topic_image'],
+                            description: topics_with_details[index]
+                                ['description'],
+                            authorname: topics_with_details[index]
+                                ['editor name'],
+                            profilepic: topics_with_details[index]
+                                ['editor profile'],
+                          ),
+                        ),
+                      );
+                    },
                   );
                 })),
       ),

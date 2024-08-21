@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/meta/screens/newslist_screen.dart';
+import 'package:newsapp/meta/screens/newslist/newslist_screen.dart';
 
-import '../../app/constants/constants.dart';
-import '../../app/constants/sizeconfig.dart';
+import '../../../app/constants/constants.dart';
+import '../../../app/constants/sizeconfig.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

@@ -33,7 +33,7 @@ class _FavouriteTopicScreenState extends State<FavouriteTopicScreen> {
         child: Column(
           children: [
             CachedNetworkImage(
-              height: SizeConfig.screenHeight! * 0.3,
+              height: SizeConfig.screenHeight! * 0.35,
               width: SizeConfig.screenWidth,
               imageUrl:
                   "https://images.unsplash.com/photo-1554469384-e58fac16e23a",
@@ -68,7 +68,7 @@ class _FavouriteTopicScreenState extends State<FavouriteTopicScreen> {
                         fontWeight: FontWeight.w700),
                   ),
                   SizedBox(
-                    height: SizeConfig.blockSizeVertical! * 3,
+                    height: SizeConfig.blockSizeVertical! * 1,
                   ),
                 ],
               ),

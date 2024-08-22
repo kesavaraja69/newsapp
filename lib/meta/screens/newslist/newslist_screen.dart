@@ -13,7 +13,7 @@ class NewsListScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: BConstantColors.homebgColor,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
         child: Expanded(
             child: ListView.builder(
                 itemCount: topics_with_details.length,

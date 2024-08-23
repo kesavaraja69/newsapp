@@ -212,7 +212,7 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
               Custombutton2(
                 string: isReadmore ? "Read more" : "Read less ",
                 textstyle: kPopinsSemiBold.copyWith(
-                    fontSize: SizeConfig.blockSizeHorizontal! * 3.3,
+                    fontSize: SizeConfig.blockSizeHorizontal! * 4,
                     color: BConstantColors.buttontxtColor),
                 voidCallback: () {
                   setState(() {
@@ -244,57 +244,53 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
           SizedBox(
             height: SizeConfig.blockSizeVertical! * 1,
           ),
-          SizedBox(
-            width: SizeConfig.screenWidth!,
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 12, right: 12),
-                  child: Container(
-                    height: SizeConfig.blockSizeVertical! * 9,
-                    width: SizeConfig.blockSizeHorizontal! * 25,
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 23, 10, 10),
-                      image: DecorationImage(
-                          image: NetworkImage(
-                              "https://i0.wp.com/sanantonioreport.org/wp-content/uploads/2024/05/IMG_0177-scaled.jpg"),
-                          fit: BoxFit.fill),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(7),
+          Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 12, right: 5),
+              child: Container(
+                height: SizeConfig.blockSizeVertical! * 8,
+                width: SizeConfig.blockSizeHorizontal! * 25,
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 23, 10, 10),
+                  image: DecorationImage(
+                      image: NetworkImage(
+                          "https://i0.wp.com/sanantonioreport.org/wp-content/uploads/2024/05/IMG_0177-scaled.jpg"),
+                      fit: BoxFit.fill),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(7),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 2),
+                    child: SizedBox(
+                      width: SizeConfig.screenWidth! * 0.67,
+                      child: Text(
+                        "San Antonio security company tests surveillance robots from Singapore",
+                        style: kPopinsSemiBold.copyWith(
+                            fontSize: SizeConfig.blockSizeHorizontal! * 3.7),
                       ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(4.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 2),
-                        child: Text(
-                          "San Antonio security company tests surveillance robots from Singapore",
-                          style: kPopinsSemiBold.copyWith(
-                              fontSize: SizeConfig.blockSizeHorizontal! * 3),
-                          overflow: TextOverflow.clip,
-                        ),
-                      ),
-                      SizedBox(
-                        height: SizeConfig.blockSizeVertical! * 0.25,
-                      ),
-                      Text(
-                        " 1 hour ago | 4 min read",
-                        style: kPopinsSemiBold.copyWith(
-                            fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
-                            color: BConstantColors.txt2Color),
-                      ),
-                    ],
+                  SizedBox(
+                    height: SizeConfig.blockSizeVertical! * 0.25,
                   ),
-                ),
-              ]),
+                  Text(
+                    " 1 hour ago | 4 min read",
+                    style: kPopinsSemiBold.copyWith(
+                        fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
+                        color: BConstantColors.txt2Color),
+                  ),
+                ],
+              ),
             ),
-          ),
+          ]),
           SizedBox(
             height: SizeConfig.blockSizeVertical! * 3,
           ),
